@@ -151,7 +151,7 @@ https://info.cern.ch
 ## https 통신규칙
 
 ~~~
-https://123.0.0.1:8800/index.html
+https://127.0.0.1:8800/index.html
 ~~~
 
 https는 html로 통신을 하겠다는 규칙을 말한다. 뒤의 127.0.0.1은 웹서버의 주소를 의미한다.
