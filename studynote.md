@@ -172,4 +172,117 @@ https는 html로 통신을 하겠다는 규칙을 말한다. 뒤의 127.0.0.1은
 > [댓글기능 추가](https://disqus.com/)</br>
 > [채팅기능 추가](https://www.tawk.to/)</br>
 > [구글 애널리틱스 추가](https://developers.google.com/analytics?hl=ko)</br>
-> 
+
+# CSS
+
+CSS 는 html과 목적이 다른 언어이다.
+HTML은 웹문서의 구조를 잡아주는 언어라면 CSS는 웹문서의 디자인을 관리하는 언어이다.
+
+## CSS의 목적
+
+html은 문서의 정보전달을, CSS는 문서의 디자인을 전담하기 위해 만들어졌다.
+html에서 디자인까지 담당한다면 코드의 중복이 발생한다.
+
+### 코드 중복 제거시 이점
+
+코드 중복 제거시 코드의 유지 보수가 수월해진다.
+가독성도 증가한다.
+그리고 비용이 낮아진다.
+중복이 제거 된 코드일수록 더 좋은 코드이다.
+
+## CSS 코드 넣는 법
+
+~~~html
+
+<li><a href="www.yahoo.com" ,style="color: red"> </a>
+~~~
+
+~~~html
+
+<style>
+</style>
+~~~
+
+위의 방법은 속성을, 아래방법은 코드에 직접 CSS를 구현하는 방법이다.
+
+## 선택자
+
+~~~html
+
+<style>
+    a {
+        color: red;
+    }
+</style>
+~~~
+
+CSS의 문법은 style 태그로 시작된다. CSS의 문법은 선택자에서 시작된다.
+선택자는 코드블럭 내에 선언이 있다.
+선언에는 속성과 값이 쌍으로 존재한다.
+속성과 값은 :으로 짝지어진다.
+위의 예제에서 a는 선택자, color는 속성, red는 값을 말한다.
+
+## 프로퍼티
+
+프로퍼티는 선택자가 웹페이지에서 담당하는 효과를 말한다.
+프로퍼티와 선택자는 물과 기름처럼 CSS의 핵심요소다.
+
+## 선택자의 순위
+
+> id 선택자 > class 선택자 > 태그 선택자 </br>
+
+id 선택자는 페이지 내에서 유일무이해야한다.
+태그 선택자는 포괄적으로 적용한다.
+class 선택자는 id 와 태그 선택자 사이의 중요도를 가진다.
+
+## Box Model
+
+Box model은 태그가 웹페이지 상에 실제로 나타나는 대상을 모델화한 것이다.
+태그는 부피감에 따라 Block Level Element, Inline Element으로 구분된다.
+태그 내부는 안에서 밖으로 Content, Padding, Border, Margin으로 구분한다.
+Content은 폭과 높이가 width, height으로 대응한다.
+
+## Box Model의 활용
+
+Style 태그 내에 선택자들을 선택해서 속성을 정하는 방식으로 조절할 수 있다.
+
+## Grid
+
+grid는 웹페이지를 디자인하기 위해 쓰는 기법 중에 하나다.
+무색무취의 태그인 div를 사용한다.
+div를 이용해서 태그들을 디자인요소를 기준으로 묶을 수 있다.
+CSS style로 그리드를 설정할 수 있다.
+부모자식관계의 div가 필요하다.
+
+~~~html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #grid {
+        . . . display: grid;
+            grid-template-columns: 2px 1fr;
+        . . .
+        }
+
+        #element {
+
+        }
+    </style>
+</head>
+<body>
+<div id="grid">
+    <div id="element">
+
+    </div>
+</div>
+</body>
+</html>
+~~~
+
+## div vs span
+
+div 태그와 span 태그는 디자인적 요소로 태그를 선언한다. 하지만 div는 블럭레벨 요소이나 span태그는 인라인요소이다.
+
+## 미디어쿼리
+
